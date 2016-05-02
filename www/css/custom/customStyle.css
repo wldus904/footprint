@@ -1,0 +1,76 @@
+html, body { height:100%;}
+
+/* 공통 */
+.angularview {
+	width: 100%;
+	height: 90%;
+}
+
+.contentWrap {
+	width: 100%;
+	height: 100%;
+}
+
+/* 메뉴 */
+.topMenuWrap {
+	width:100%; 
+	height: 10%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.topMenu {
+	display:inline-block; 
+	width: 25%; 
+	height: 50px;
+	padding-top: 12px;
+	text-align: center; 
+	color: orange;
+	border: 2px solid orange;
+	cursor: pointer;
+}
+
+/* 메인 */
+.mainWrap {
+	width: 100%; 
+	margin-top: 200px; 
+	text-align: center; 
+	vertical-align: middle;
+	font-size: 2em;
+}
+
+.mainWrap span {
+	cursor: pointer;
+}
+
+.mainWrap img {
+	width: 40%;
+}
+
+/* 대쉬보드 */
+.google-map {  height: 100%; }
+
+.mapWrap {
+	width: 100%; 
+	height: 100%; 
+	text-align: center;
+}
+
+.mapBox {
+	display: inline-block; 
+	width: 90%; 
+	height: 100%; 
+	border: 2px solid gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,20 +1,13 @@
-// Ionic Starter App
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+var footprint = angular.module('starter', ['ngRoute', 'ionic', 'footprintCtrl', 'footprintDir', 'footprintSer', 'ngMaps']);
+var footprintCtrl = angular.module('footprintCtrl', ['ngRoute', 'ionic']);
+var footprintDir = angular.module('footprintDir', ['ngRoute', 'ionic']);
+var footprintSer = angular.module('footprintSer', ['ngRoute', 'ionic']);
 
-.run(function($ionicPlatform) {
+footprint.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
       cordova.plugins.Keyboard.disableScroll(true);
     }
     if(window.StatusBar) {
@@ -22,3 +15,38 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+footprint.config(function($urlRouterProvider, $routeProvider) {
+	
+	
+	
+	$routeProvider
+		.when('/', {
+			templateUrl: 'views/main/main.html',
+			controller: 'mainCtrl'
+		})
+		.when('/dashboard', {
+			templateUrl: 'views/dashboard/dashboard.html',
+			controller: 'dashBoardCtrl'
+		})
+		.when('/recommendTravel', {
+			templateUrl: 'views/recommendTravel/recommendTravel.html',
+			controller: 'recommendTravelCtrl'
+		})
+		.when('/travelMission', {
+			templateUrl: 'views/travelMission/travelMission.html',
+			controller: 'travelMissionCtrl'
+		})
+		.when('/myTravel', {
+			templateUrl: 'views/myTravel/myTravel.html',
+			controller: 'myTravelCtrl'
+		})
+		.when('/setting', {
+			templateUrl: 'views/setting/setting.html',
+			controller: 'settingCtrl'
+		})
+	.otherwise({
+		redirectTo: '/'
+	}); // 초기 화면 설정 
+	  
+});
