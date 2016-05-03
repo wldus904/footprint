@@ -1,8 +1,20 @@
+<div menu-directive></div>
 <div class="contentWrap">
 	<div class="mapWrap">
 		<span class="mapBox">
 			<map ng-transclude class="google-map"  center="map.center" options="map.options" events="map.events" zoom="16">
 				<points coords="points.coords" options="points.options" events="points.events" decimals="points.decimals"></points>
+				<polylines coords="polylines.coords" options="polylines.options"></polylines>
+				<infowindow position="infowindow.position" ng-repeat="infowindow in infowindowList">
+					<h4> 추천경로 {{infowindow.value}}</h4>
+					{{infowindow.value}}
+				</infowindow>
+				<control position="rightBottom">
+				    <div style="background-color: white; border: 2px solid black; margin-right: 10px;">
+					    <h5>goMyLocation</h5>
+					    <button style="background-color: orange; color: white;" ng-click='goMyLocation()'>goMyLocation</button>
+				    </div>
+				</control>
 			</map>
 		</span>
 	</div>

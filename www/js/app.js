@@ -1,5 +1,5 @@
 
-var footprint = angular.module('starter', ['ngRoute', 'ionic', 'footprintCtrl', 'footprintDir', 'footprintSer', 'ngMaps']);
+var footprint = angular.module('starter', ['ngRoute', 'ionic', 'footprintCtrl', 'footprintDir', 'footprintSer', 'ngMaps', 'ngGeolocation']);
 var footprintCtrl = angular.module('footprintCtrl', ['ngRoute', 'ionic']);
 var footprintDir = angular.module('footprintDir', ['ngRoute', 'ionic']);
 var footprintSer = angular.module('footprintSer', ['ngRoute', 'ionic']);
